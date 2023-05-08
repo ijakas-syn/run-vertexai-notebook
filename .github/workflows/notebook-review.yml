@@ -27,8 +27,8 @@ permissions:
   id-token: 'write'
 
 env:
-  GCS_SOURCE: mybucket/ghnbr/source          # TODO: Update to a bucket with proper ACLs
-  GCS_OUTPUT: mybucket/ghnbr/output          # TODO: Update to a bucket with proper ACLs
+  GCS_SOURCE: gs://labs-datafusion-test/source        # TODO: Update to a bucket with proper ACLs
+  GCS_OUTPUT: gs://labs-datafusion-test/output       # TODO: Update to a bucket with proper ACLs
 
 jobs:
 
@@ -48,7 +48,7 @@ jobs:
         list-files: shell
         filters: |
           notebooks:
-            - 'examples/somedir/**.ipynb'
+            - '**.ipynb'
 
   # JOB to initiate the notebook review process
   notebook-review:
