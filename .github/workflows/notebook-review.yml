@@ -48,7 +48,7 @@ jobs:
         list-files: shell
         filters: |
           notebooks:
-            - 'examples/somedir/**.ipynb'
+            - '**.ipynb'
 
   # JOB to initiate the notebook review process
   notebook-review:
