@@ -71,7 +71,7 @@ jobs:
       name: 'Authenticate to Google Cloud'
       uses: 'google-github-actions/auth@b258a9f230b36c9fa86dfaa43d1906bd76399edb'
       with:
-        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+        credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
 
     - id: notebook-review
       uses: 'google-github-actions/run-vertexai-notebook@v0'
